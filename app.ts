@@ -51,11 +51,11 @@ const server = serve({
                 // const jsonStr = response.replace(/```json\n|\n```/g, '');
                 // const parsedResponse = JSON.parse(jsonStr);
                 // const description = parsedResponse.description || "";
-                
-                // return new Response(JSON.stringify({ description }), {
-                //     status: 200,
-                //     headers: { "Content-Type": "application/json" }
-                // });
+                var description = "test"
+                return new Response(JSON.stringify({ description }), {
+                    status: 200,
+                    headers: { "Content-Type": "application/json" }
+                });
             } catch (error) {
                 console.error("Błąd:", error);
                 return new Response(JSON.stringify({ error: "Wystąpił błąd podczas przetwarzania" }), {
