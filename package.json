@@ -1,0 +1,16 @@
+{
+  "name": "drone-instruction-server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "bun run app.ts"
+  },
+  "dependencies": {
+    "openai": "^4.28.0",
+    "dotenv": "^16.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "bun-types": "latest"
+  }
+} 
