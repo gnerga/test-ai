@@ -29,7 +29,7 @@ const server = serve({
                 console.log("Otrzymano instrukcję:", instruction);
 
                 // Send to OpenAI
-             /*   const prompt = `${context}\n\nOtrzymana instrukcja: ${instruction}\n\nProszę o opis miejsca gdzie znajduje się dron. Zwróć odpowiedź w formacie JSON z polami "thinking process" i "description".`;
+                const prompt = `${context}\n\nOtrzymana instrukcja: ${instruction}\n\nProszę o opis miejsca gdzie znajduje się dron. Zwróć odpowiedź w formacie JSON z polami "thinking process" i "description".`;
                 
                 const completion = await openai.chat.completions.create({
                     model: "gpt-4o-mini",
@@ -46,8 +46,7 @@ const server = serve({
                 const jsonStr = response.replace(/```json\n|\n```/g, '');
                 const parsedResponse = JSON.parse(jsonStr);
                 const description = parsedResponse.description || "";
-               */ 
-                var description = "test: " + process.env.TEST_KEY
+               
                 return new Response(JSON.stringify({ description }), {
                     status: 200,
                     headers: { 
