@@ -7,9 +7,9 @@ import { config } from "dotenv";
 config();
 
 // Initialize OpenAI client
-const openai = new OpenAI({
-    apiKey: process.env.OPEN_AI_KEY,
-});
+// const openai = new OpenAI({
+//     apiKey: process.env.TEST_KEY,
+// });
 
 // Read context file
 const context = readFileSync("./context.md", "utf-8");
