@@ -51,7 +51,7 @@ const server = serve({
                 // const jsonStr = response.replace(/```json\n|\n```/g, '');
                 // const parsedResponse = JSON.parse(jsonStr);
                 // const description = parsedResponse.description || "";
-                var description = "test"
+                var description = "test: " + process.env.TEST_KEY
                 return new Response(JSON.stringify({ description }), {
                     status: 200,
                     headers: { "Content-Type": "application/json" }
